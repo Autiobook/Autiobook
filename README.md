@@ -53,6 +53,7 @@ Turn any big block of text into an audiobook you can listen to on the go.
 * Good styling.
 * Dark mode, light mode.
 * Bookmarks to pick up where you left off.
+* OAuth to replace login and register screens. (Would make avoiding rate limits MUCH more difficult.)
 
 ### 2. Screen Archetypes
 
