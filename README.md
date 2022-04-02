@@ -94,7 +94,11 @@ Turn any big block of text into an audiobook you can listen to on the go.
 ## Schema 
 [This section will be completed in Unit 9]
 ### Models
-[Add table of models]
+| Property      | Type          | Description  |
+| ------------- |---------------|--------------|
+| objectId      | String        | unique id for the user post (default field)    |
+| createdAt     | DateTime      | date when post is created (default field)      |
+| createdWith   | Object        | Information about how this session was created |
 ### Networking
 - [Add list of network requests by screen ]
 - [Create basic snippets for each Parse network request]
