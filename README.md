@@ -94,9 +94,12 @@ Turn any big block of text into an audiobook you can listen to on the go.
 ## Schema 
 [This section will be completed in Unit 9]
 ### Models
+User
 | Property      | Type          | Description  |
 | ------------- |---------------|--------------|
 | objectId      | String        | unique id for the user post (default field)    |
+| username      | String        | unique username for authentication             |
+| password      | String        | password for authentication                    |
 | createdAt     | DateTime      | date when post is created (default field)      |
 | createdWith   | Object        | Information about how this session was created |
 ### Networking
