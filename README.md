@@ -105,4 +105,11 @@ User
 ### Networking
 - [Add list of network requests by screen ]
 - [Create basic snippets for each Parse network request]
-- [OPTIONAL: List endpoints if using existing API such as Yelp]
+##### Google Text to Speech API
+Base URL - [https://texttospeech.googleapis.com](https://texttospeech.googleapis.com)
+
+HTTP Verb | Endpoint | Description
+----------|----------|------------
+`GET`    | /characters | get all characters
+
+
