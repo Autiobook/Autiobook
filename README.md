@@ -110,6 +110,6 @@ Base URL - [https://texttospeech.googleapis.com](https://texttospeech.googleapis
 
 HTTP Verb | Endpoint | Description
 ----------|----------|------------
-`GET`    | /characters | get all characters
+`POST`    | /v1beta1/text:synthesize | Synthesizes speech synchronously: receive results after all text input has been processed.
 
 
