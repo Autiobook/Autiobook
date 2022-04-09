@@ -111,7 +111,7 @@ Audio
 | createdAt     | DateTime      | date when audio is created (default field)      |
 | createdWith   | Object        | Information about how this session was created |
 ### Networking
-- [](https://i.imgur.com/9SeXDLT.png)
+- ![](https://i.imgur.com/9SeXDLT.png)
 - Login
 ```swift
 ParseUser.logInInBackground(username, password, new LogInCallback() {
