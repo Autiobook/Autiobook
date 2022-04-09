@@ -102,6 +102,7 @@ User
 | password      | String        | password for authentication                    |
 | createdAt     | DateTime      | date when user is created (default field)      |
 | createdWith   | Object        | Information about how this session was created |
+
 Audio
 | Property      | Type          | Description  |
 | ------------- |---------------|--------------|
@@ -110,6 +111,7 @@ Audio
 | content      | String        | text content to translate            |
 | createdAt     | DateTime      | date when audio is created (default field)      |
 | createdWith   | Object        | Information about how this session was created |
+
 ### Networking
 ![](https://i.imgur.com/9SeXDLT.png)
 - Login
