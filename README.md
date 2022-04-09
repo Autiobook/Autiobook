@@ -111,7 +111,7 @@ Audio
 | createdAt     | DateTime      | date when audio is created (default field)      |
 | createdWith   | Object        | Information about how this session was created |
 ### Networking
-- ![](https://i.imgur.com/9SeXDLT.png)
+![](https://i.imgur.com/9SeXDLT.png)
 - Login
 ```swift
 ParseUser.logInInBackground(username, password, new LogInCallback() {
@@ -153,12 +153,10 @@ user.signUpInBackground(new SignUpCallback() {
 });
 ```
 - Home
-##### Google Text to Speech API
-Base URL - [https://texttospeech.googleapis.com](https://texttospeech.googleapis.com)
-
+**Autiobook API**
 HTTP Verb | Endpoint | Description
 ----------|----------|------------
-`POST`    | /v1beta1/text:synthesize | Synthesizes speech synchronously: receive results after all text input has been processed.
-`GET`    | /v1beta1/voices | Returns a list of Voice supported for synthesis.
+`POST`    | /tts/text/:text | Uses a text to speech model to generate the audio file from raw text passed in. Returns link to the audio file.
+`POST`    | /tts/text/:link_to_text_file | Uses text to speech model to generate audio file from the link to a text file. Returns link to audio file.
 
 
