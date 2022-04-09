@@ -104,7 +104,51 @@ User
 | createdWith   | Object        | Information about how this session was created |
 ### Networking
 - [Add list of network requests by screen ]
-- [Create basic snippets for each Parse network request]
+- Translate File/Text
+```swift
+
+```
+- Login
+```swift
+ParseUser.logInInBackground(username, password, new LogInCallback() {
+   @Override
+   public void done(ParseUser user, ParseException e) {
+       if(e != null) {
+           Log.e(TAG, "Issue with login", e);
+           return;
+       }
+       goMainActivity();
+       Toast.makeText(LoginActivity.this, "Success!", Toast.LENGTH_SHORT).show();
+   }
+});
+```
+- Signup
+```swift
+// Create the ParseUser
+ParseUser user = new ParseUser();
+// Set core properties
+user.setUsername(username);
+user.setPassword(password);
+
+// Invoke signUpInBackground
+user.signUpInBackground(new SignUpCallback() {
+   public void done(ParseException e) {
+       if (e == null) {
+           // Hooray! Let them use the app now.
+           etUsernameSignup.setText("");
+           etPasswordSignup.setText("");
+           goLoginActivity();
+           Toast.makeText(SignUpActivity.this, "Successfully Signed Up", Toast.LENGTH_SHORT).show();
+       } else {
+           // Sign up didn't succeed. Look at the ParseException
+           // to figure out what went wrong
+           Log.e(TAG, "Signup failed!", e);
+           Toast.makeText(SignUpActivity.this, "Signup Failed!", Toast.LENGTH_SHORT).show();
+       }
+   }
+});
+```
+- Home
 ##### Google Text to Speech API
 Base URL - [https://texttospeech.googleapis.com](https://texttospeech.googleapis.com)
 
