@@ -97,10 +97,18 @@ Turn any big block of text into an audiobook you can listen to on the go.
 User
 | Property      | Type          | Description  |
 | ------------- |---------------|--------------|
-| objectId      | String        | unique id for the user post (default field)    |
+| objectId      | String        | unique id for the user(default field)    |
 | username      | String        | unique username for authentication             |
 | password      | String        | password for authentication                    |
-| createdAt     | DateTime      | date when post is created (default field)      |
+| createdAt     | DateTime      | date when user is created (default field)      |
+| createdWith   | Object        | Information about how this session was created |
+Audio
+| Property      | Type          | Description  |
+| ------------- |---------------|--------------|
+| objectId      | String        | unique id for the id|
+| title    | String        | title of audio          |
+| content      | String        | text content to translate            |
+| createdAt     | DateTime      | date when audio is created (default field)      |
 | createdWith   | Object        | Information about how this session was created |
 ### Networking
 - [Add list of network requests by screen ]
