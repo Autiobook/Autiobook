@@ -154,6 +154,7 @@ user.signUpInBackground(new SignUpCallback() {
 ```
 - Home
 **Autiobook API**
+
 HTTP Verb | Endpoint                     | Description |
 ----------|------------------------------|------------ |
 `POST`    | /tts/text/:text              | Generate the audio file from raw text passed in. Returns link to the audio file. |
