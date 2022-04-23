@@ -87,6 +87,9 @@ Turn any big block of text into an audiobook you can listen to on the go.
 ## Wireframes
 ![](https://i.imgur.com/WPSxZgY.jpg)
 
+### Walkthrough GIF
+<img src="https://github.com/Autiobook/Autiobook/blob/master/walkthrough.gif" width=200>
+
 ### [BONUS] Digital Wireframes & Mockups
 
 ### [BONUS] Interactive Prototype
@@ -161,5 +164,4 @@ HTTP Verb | Endpoint                     | Description |
 ----------|------------------------------|------------ |
 `POST`    | /tts/text/:text              | Generate the audio file from raw text passed in. Returns link to the audio file. |
 `POST`    | /tts/text/:link_to_text_file | Generate audio file from the link to a text file. Returns link to audio file. |
-
 
