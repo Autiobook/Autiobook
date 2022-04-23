@@ -87,6 +87,9 @@ Turn any big block of text into an audiobook you can listen to on the go.
 ## Wireframes
 ![](https://i.imgur.com/WPSxZgY.jpg)
 
+### Walkthrough GIF
+<img src="https://github.com/Autiobook/Autiobook/blob/master/walkthrough.gif" width=200>
+
 ### [BONUS] Digital Wireframes & Mockups
 
 ### [BONUS] Interactive Prototype
