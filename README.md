@@ -25,12 +25,8 @@ Turn any big block of text into an audiobook you can listen to on the go.
 **Required Must-have Stories**
 
 * [ ] API:
-    * [ ] Deployed on cloud (preferrably serverless computing to save on costs).
     * [ ] Convert a text input (.txt only) into an audio output (mp3).
         * Speech synthesis model, must be computationally inexpensive.
-    * [ ] Authenticated by an API key.
-        * Different types of keys: Rate limited and unlimited.
-
 
 * Mobile Frontend:
     * [x] Sign up system (auto generate rate limited API key?).
