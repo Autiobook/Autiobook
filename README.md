@@ -24,36 +24,36 @@ Turn any big block of text into an audiobook you can listen to on the go.
 
 **Required Must-have Stories**
 
-* API:
-    * Deployed on cloud (preferrably serverless computing to save on costs).
-    * Convert a text input (.txt only) into an audio output (mp3).
+* [ ] API:
+    * [ ] Deployed on cloud (preferrably serverless computing to save on costs).
+    * [ ] Convert a text input (.txt only) into an audio output (mp3).
         * Speech synthesis model, must be computationally inexpensive.
-    * Authenticated by an API key.
+    * [ ] Authenticated by an API key.
         * Different types of keys: Rate limited and unlimited.
 
 
 * Mobile Frontend:
-    * Sign up system (auto generate rate limited API key?).
-    * Login system.
-    * Ability to upload a file to generate and download audiobooks.
-    * Feed to scroll through generated audiobooks.
-    * Playback audiobooks on the feed.
-    * User should not be able to log out.
+    * [x] Sign up system (auto generate rate limited API key?).
+    * [x] Login system.
+    * [ ] Ability to upload a file to generate and download audiobooks.
+    * [ ] Feed to scroll through generated audiobooks.
+    * [ ] Playback audiobooks on the feed.
+    * [x] User should not be able to log out.
         * Reason: Make it harder to repeatedly generate new API keys by registering many accounts over again.
-    * Switch between the feed and upload screens.
-    * No generated audiobooks should be stored on any server. Everything should be stored in a local directory. (**IMPORTANT**)
+    * [ ] Switch between the feed and upload screens.
+    * [ ] No generated audiobooks should be stored on any server. Everything should be stored in a local directory. (**IMPORTANT**)
 
 **Optional Nice-to-have Stories**
 
 <!-- * [fill in your required user stories here] -->
-* Locally convert several types of text formats into txt.
+* [ ] Locally convert several types of text formats into txt.
     * PDF, RTF, JSON, EPUB
-* Allow camera to scan text.
-* Supporting multiple text and image formats.
-* Good styling.
-* Dark mode, light mode.
-* Bookmarks to pick up where you left off.
-* OAuth to replace login and register screens. (Would make avoiding rate limits MUCH more difficult.)
+* [ ] Allow camera to scan text.
+* [ ] Supporting multiple text and image formats.
+* [ ] Good styling.
+* [ ] Dark mode, light mode.
+* [ ] Bookmarks to pick up where you left off.
+* [ ] OAuth to replace login and register screens. (Would make avoiding rate limits MUCH more difficult.)
 
 ### 2. Screen Archetypes
 
