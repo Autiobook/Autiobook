@@ -52,7 +52,7 @@ Turn any big block of text into an audiobook you can listen to on the go.
 * [ ] OAuth to replace login and register screens. (Would make avoiding rate limits MUCH more difficult.)
 
 ### Walkthrough UNIT 11 GIF
-<img src="https://github.com/Autiobook/Autiobook/blob/master/walkthrough2.gif" width=200>
+<img src="https://github.com/Autiobook/Autiobook/blob/main/walkthrough2.gif" width=200>
 
 ### 2. Screen Archetypes
 
