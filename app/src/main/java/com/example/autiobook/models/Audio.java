@@ -4,12 +4,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Audio {
-    private String path;
+    private String textPath;
+    private String audioPath;
     private String name;
     private String content;
 
-    public Audio(String path, String name, String content){
-        this.path = path;
+    public Audio(String textPath, String audioPath, String name, String content){
+        this.textPath = textPath;
+        this.audioPath = audioPath;
         this.name = name;
         this.content = content;
     }
@@ -22,15 +24,19 @@ public class Audio {
     }
 
 
-    public String getPath() {
-        return path;
-    }
-
     public String getName() {
         return name;
     }
 
     public String getContent() {
         return content;
+    }
+
+    public String getAudioPath() {
+        return audioPath;
+    }
+
+    public String getTextPath() {
+        return textPath;
     }
 }
