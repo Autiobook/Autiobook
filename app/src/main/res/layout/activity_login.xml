@@ -13,12 +13,15 @@
         android:id="@+id/etUsername"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="140dp"
+        android:background="@drawable/etusernameborder"
         android:ems="10"
         android:hint="username"
         android:inputType="textPersonName"
+        android:padding="10dp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -27,9 +30,12 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
+        android:background="@drawable/etusernameborder"
         android:ems="10"
         android:hint="password"
         android:inputType="textPersonName|textPassword"
+        android:padding="10dp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
@@ -37,22 +43,48 @@
 
     <Button
         android:id="@+id/btnLogin"
-        android:layout_width="150dp"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:backgroundTint="@color/teal_200"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="#00AAFF"
         android:text="Login"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etPassword" />
 
     <Button
         android:id="@+id/btnSignup"
-        android:layout_width="150dp"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:backgroundTint="#2196F3"
+        android:layout_marginTop="45dp"
+        android:backgroundTint="#00FF55"
         android:text="Signup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/sacramento"
+        android:text="AudioBook"
+        android:textColor="#000000"
+        android:textSize="48sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toTopOf="@+id/etUsername"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-------------------------     OR     -------------------------"
+        app:layout_constraintBottom_toTopOf="@+id/btnSignup"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
