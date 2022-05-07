@@ -69,7 +69,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/Sacramento"
+        android:fontFamily="@font/sacramento"
         android:text="AudioBook"
         android:textColor="#000000"
         android:textSize="48sp"
@@ -78,6 +78,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="lala"
+        android:textColor="#FFFFFF"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textView2"
