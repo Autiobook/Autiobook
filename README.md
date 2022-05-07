@@ -50,6 +50,9 @@ Turn any big block of text into an audiobook you can listen to on the go.
 * [ ] Dark mode, light mode.
 * [ ] Bookmarks to pick up where you left off.
 * [ ] OAuth to replace login and register screens. (Would make avoiding rate limits MUCH more difficult.)
+* [ ] 
+### Walkthrough UNIT 12 GIF
+<img src="https://github.com/Autiobook/Autiobook/blob/main/walkthrough3.gif" width=200>
 
 ### Walkthrough UNIT 11 GIF
 <img src="https://github.com/Autiobook/Autiobook/blob/main/walkthrough2.gif" width=200>
