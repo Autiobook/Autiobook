@@ -24,15 +24,18 @@
         android:layout_margin="10dp"
         android:text="Upload Text" />
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="400dp">
     <TextView
         android:id="@+id/tvPreview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:maxHeight="700dp"
-        android:text="TextView"
+        android:text=""
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         tools:text="Barry B. Benson, an idealistic honey bee who has the ability to talk to humans, has recently graduated from college and is about to enter the hive's Honex Industries honey-making workforce with his best friend Adam Flayman. Barry is initially excited to join the workforce, but his ambitious, insubordinate attitude emerges upon discovering that his choice of job will never change once picked. Later, the two bees run into a group of Pollen Jocks, bees who collect pollen from flowers outside the hive, and they offer to take Barry with them if he is &quot;bee enough&quot;. While on his first pollen-gathering expedition in New York City, Barry gets lost in the rain, and ends up on the balcony of a human florist named Vanessa Bloome. Upon noticing Barry, Vanessa's boyfriend Ken attempts to squash him, but Vanessa gently catches and releases Barry outside the window, saving his life. " />
+    </ScrollView>
 
     <Button
         android:id="@+id/btnCreate"
