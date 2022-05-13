@@ -49,20 +49,17 @@ public class AudioAdapter extends RecyclerView.Adapter<AudioAdapter.ViewHolder>{
     class ViewHolder extends RecyclerView.ViewHolder{
 
         private TextView tvName;
-        private TextView tvContent;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            tvContent = itemView.findViewById(R.id.tvContent);
             tvName = itemView.findViewById(R.id.tvName);
         }
 
         public void bind(Audio audio) {
             //bind data
-            tvContent.setText(audio.getContent());
             tvName.setText(audio.getName());
 
-            tvContent.setOnClickListener(new View.OnClickListener() {
+            tvName.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     onClickListener.onItemClick(getAdapterPosition());

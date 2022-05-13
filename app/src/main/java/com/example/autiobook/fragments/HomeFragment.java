@@ -1,5 +1,6 @@
 package com.example.autiobook.fragments;
 
+import android.content.ContextWrapper;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -9,6 +10,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.os.Environment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,6 +21,7 @@ import com.example.autiobook.DetailActivity;
 import com.example.autiobook.R;
 import com.example.autiobook.models.Audio;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -86,17 +89,7 @@ public class HomeFragment extends Fragment {
 
         rvFeed = view.findViewById(R.id.rvFeed);
 
-        audioBooks = new ArrayList<>();
-
-        // filler audiobooks to show on recycler view for now
-        String textPath = "/textpath";
-        String audioPath = "/path";
-        String name = "File Name";
-        String content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
-        Audio audio = new Audio(textPath, audioPath, name, content);
-        for(int i=0;i<30;i++){
-            audioBooks.add(audio);
-        }
+        audioBooks = Audio.getUserAudioBooks(getContext());
 
         AudioAdapter.onClickListener onClickListener = new AudioAdapter.onClickListener() {
             @Override
@@ -111,5 +104,17 @@ public class HomeFragment extends Fragment {
 
         rvFeed.setAdapter(audioAdapter);
         rvFeed.setLayoutManager(new LinearLayoutManager(getContext()));
+    }
+
+    private void listAudios(){
+        ContextWrapper contextWrapper = new ContextWrapper(getContext());
+        File musicDirectory = contextWrapper.getExternalFilesDir(Environment.DIRECTORY_MUSIC);
+
+        File[] files = musicDirectory.listFiles();
+        Log.d("Files", "Size: "+ files.length);
+        for (int i = 0; i < files.length; i++)
+        {
+            Log.d("Files", "FileName:" + files[i].getName());
+        }
     }
 }

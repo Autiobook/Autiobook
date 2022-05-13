@@ -1,26 +1,38 @@
 package com.example.autiobook.models;
 
+import android.content.Context;
+import android.content.ContextWrapper;
+import android.os.Environment;
+
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Audio {
-    private String textPath;
-    private String audioPath;
+    private File file;
     private String name;
-    private String content;
 
-    public Audio(String textPath, String audioPath, String name, String content){
-        this.textPath = textPath;
-        this.audioPath = audioPath;
-        this.name = name;
-        this.content = content;
+    public Audio(String name, File file){
+        //remove the .mp3
+        this.name = name.substring(0,name.length()-4);
+        this.file = file;
     }
-    public static List<Audio> getUserAudioBooks(){
-//        ** TO DO **
-//        1. grab user mp3 files from raw storage
-//        2. for each audio put the metadata into a new Audio()
-//        3. return the list of audios
-        return new ArrayList<Audio>();
+    public static List<Audio> getUserAudioBooks(Context context){
+        //get dir
+        ContextWrapper contextWrapper = new ContextWrapper(context);
+        File musicDirectory = contextWrapper.getExternalFilesDir(Environment.DIRECTORY_MUSIC);
+
+        //get files
+        File[] files = musicDirectory.listFiles();
+        List<Audio> audioBooks = new ArrayList<>();
+
+        //init Audio list
+        for(int i=0;i<files.length;i++){
+            File book = files[i];
+            audioBooks.add(new Audio(book.getName(), book));
+        }
+
+        return audioBooks;
     }
 
 
@@ -28,15 +40,15 @@ public class Audio {
         return name;
     }
 
-    public String getContent() {
-        return content;
-    }
+//    public String getContent() {
+//        return content;
+//    }
 
-    public String getAudioPath() {
-        return audioPath;
-    }
+//    public String getAudioPath() {
+//        return audioPath;
+//    }
 
-    public String getTextPath() {
-        return textPath;
-    }
+//    public String getTextPath() {
+//        return textPath;
+//    }
 }

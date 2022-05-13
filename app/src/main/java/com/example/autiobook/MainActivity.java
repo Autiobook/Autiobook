@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.example.autiobook.fragments.CreateAudiobook;
 import com.example.autiobook.fragments.HomeFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
@@ -37,8 +38,8 @@ import com.google.android.material.navigation.NavigationBarView;
                             fragment = new HomeFragment();
                             break;
                         case R.id.btnUpload:
-                            Toast.makeText(MainActivity.this, "Compose", Toast.LENGTH_SHORT).show();
-                            fragment = new com.example.autiobook.CreateAudiobook();
+                            Toast.makeText(MainActivity.this, "Upload", Toast.LENGTH_SHORT).show();
+                            fragment = new CreateAudiobook();
                             break;
                         default:
                             Toast.makeText(MainActivity.this, "Home", Toast.LENGTH_SHORT).show();
