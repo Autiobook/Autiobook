@@ -10,6 +10,7 @@
         android:id="@+id/tvName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="#BABFF8"
         android:fontFamily="@font/sacramento"
         android:includeFontPadding="false"
         android:padding="10dp"
