@@ -4,10 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.method.PasswordTransformationMethod;
 import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.parse.ParseException;
@@ -20,6 +23,9 @@ public class SignupActivity extends AppCompatActivity {
     EditText etUsernameSignup;
     EditText etPasswordSignup;
     Button btnSignup;
+    Boolean showPass;
+    Button btnCancel;
+    TextView tvLogin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +35,23 @@ public class SignupActivity extends AppCompatActivity {
         etUsernameSignup = findViewById(R.id.etUsername);
         etPasswordSignup = findViewById(R.id.etPassword);
         btnSignup = findViewById(R.id.btnSignup);
+        tvLogin = findViewById(R.id.tvLogin);
+        btnCancel = findViewById(R.id.btnCancel);
+        showPass = false;
+
+        btnCancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                goLoginActivity();
+            }
+        });
+
+        tvLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                goLoginActivity();
+            }
+        });
 
         btnSignup.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -37,6 +60,34 @@ public class SignupActivity extends AppCompatActivity {
                 String username = etUsernameSignup.getText().toString();
                 String password = etPasswordSignup.getText().toString();
                 Signup(username, password);
+            }
+        });
+
+        etPasswordSignup.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                final int DRAWABLE_LEFT = 0;
+                final int DRAWABLE_TOP = 1;
+                final int DRAWABLE_RIGHT = 2;
+                final int DRAWABLE_BOTTOM = 3;
+
+                if(event.getAction() == MotionEvent.ACTION_UP) {
+                    if(event.getRawX() >= (etPasswordSignup.getRight() - etPasswordSignup.getCompoundDrawables()[DRAWABLE_RIGHT].getBounds().width())) {
+                        // your action here
+                        if(showPass) {
+                            //hide password
+                            etPasswordSignup.setTransformationMethod(new PasswordTransformationMethod());
+                            showPass = !showPass;
+                        }
+                        else {
+                            //show pass
+                            etPasswordSignup.setTransformationMethod(null);
+                            showPass = !showPass;
+                        }
+                        return true;
+                    }
+                }
+                return false;
             }
         });
     }
