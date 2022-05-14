@@ -25,15 +25,15 @@ Turn any big block of text into an audiobook you can listen to on the go.
 **Required Must-have Stories**
 
 * [ ] API:
-    * [ ] Convert a text input (.txt only) into an audio output (mp3).
+    * [x] Convert a text input (.txt only) into an audio output (mp3).
         * Speech synthesis model, must be computationally inexpensive.
 
 * Mobile Frontend:
     * [x] Sign up system (auto generate rate limited API key?).
     * [x] Login system.
-    * [ ] Ability to upload a file to generate and download audiobooks.
+    * [x] Ability to upload a file to generate and download audiobooks.
     * [x] Feed to scroll through generated audiobooks.
-    * [ ] Playback audiobooks on the feed.
+    * [x] Playback audiobooks on the feed.
     * [x] User should not be able to log out.
         * Reason: Make it harder to repeatedly generate new API keys by registering many accounts over again.
     * [x] Switch between the feed and upload screens.
@@ -50,7 +50,10 @@ Turn any big block of text into an audiobook you can listen to on the go.
 * [ ] Dark mode, light mode.
 * [ ] Bookmarks to pick up where you left off.
 * [ ] OAuth to replace login and register screens. (Would make avoiding rate limits MUCH more difficult.)
-* [ ] 
+
+### Walkthrough UNIT 13 GIF
+<img src="https://github.com/Autiobook/Autiobook/blob/main/walkthrough4.gif" width=200>
+
 ### Walkthrough UNIT 12 GIF
 <img src="https://github.com/Autiobook/Autiobook/blob/main/walkthrough3.gif" width=200>
 
