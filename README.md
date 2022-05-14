@@ -31,7 +31,7 @@ Turn any big block of text into an audiobook you can listen to on the go.
 * Mobile Frontend:
     * [x] Sign up system (auto generate rate limited API key?).
     * [x] Login system.
-    * [ ] Ability to upload a file to generate and download audiobooks.
+    * [x] Ability to upload a file to generate and download audiobooks.
     * [x] Feed to scroll through generated audiobooks.
     * [x] Playback audiobooks on the feed.
     * [x] User should not be able to log out.
