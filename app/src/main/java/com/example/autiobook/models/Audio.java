@@ -4,13 +4,15 @@ import android.content.Context;
 import android.content.ContextWrapper;
 import android.os.Environment;
 
+import org.parceler.Parcel;
+
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
-
+@Parcel
 public class Audio {
     private File file;
     private String name;
@@ -74,6 +76,10 @@ public class Audio {
             }
         });
         return fileList;
+    }
+
+    public File getFile() {
+        return file;
     }
 
 //    public String getContent() {

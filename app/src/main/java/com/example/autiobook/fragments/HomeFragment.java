@@ -21,6 +21,8 @@ import com.example.autiobook.DetailActivity;
 import com.example.autiobook.R;
 import com.example.autiobook.models.Audio;
 
+import org.parceler.Parcels;
+
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
@@ -97,6 +99,7 @@ public class HomeFragment extends Fragment {
                 Audio audioBook = audioBooks.get(position);
                 Log.d(TAG, "on click audio");
                 Intent intent = new Intent(getActivity(), DetailActivity.class);
+                intent.putExtra("audioBook", Parcels.wrap(audioBook));
                 startActivity(intent);
             }
         };

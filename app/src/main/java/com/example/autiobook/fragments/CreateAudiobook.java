@@ -78,7 +78,7 @@ public class CreateAudiobook extends Fragment {
         btnCreate = requireView().findViewById(R.id.btnCreate);
 
         btnUpload.setOnClickListener(e -> openFile());
-
+//        deleteAllAudios();
         //init tts and onclick for btnCreate
         InitializeTTS();
     }
@@ -188,6 +188,7 @@ public class CreateAudiobook extends Fragment {
             }else{
                 //syntehsize with tts
                 String utteranceId = title;
+                Log.i(TAG, book);
                 textToSpeech.synthesizeToFile(book, null, file, utteranceId);
                 textToSpeech.setOnUtteranceProgressListener(new UtteranceProgressListener() {
                     @Override
@@ -226,5 +227,4 @@ public class CreateAudiobook extends Fragment {
             }
         }
     }
-
 }

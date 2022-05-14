@@ -10,8 +10,13 @@
         android:id="@+id/tvName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/sacramento"
+        android:includeFontPadding="false"
+        android:padding="10dp"
         android:text="TextView"
+        android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="40sp"
         tools:text="Name" />
 
 </LinearLayout>
