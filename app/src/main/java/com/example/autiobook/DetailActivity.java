@@ -81,16 +81,8 @@ public class DetailActivity extends AppCompatActivity {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 if(fromUser){
-                    if(mediaPlayer.isPlaying()){
-                        mediaPlayer.seekTo(progress);
-                        seekBar.setProgress(progress);
-                    }
-                    else{
-                        mediaPlayer.start();
-                        mediaPlayer.seekTo(progress);
-                        seekBar.setProgress(progress);
-                    }
-
+                    mediaPlayer.seekTo(progress);
+                    seekBar.setProgress(progress);
                 }
             }
 

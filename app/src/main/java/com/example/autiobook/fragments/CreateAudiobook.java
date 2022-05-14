@@ -16,6 +16,7 @@ import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
 
 import android.os.Environment;
+import android.os.Looper;
 import android.speech.tts.TextToSpeech;
 import android.speech.tts.UtteranceProgressListener;
 import android.util.Log;
@@ -201,7 +202,13 @@ public class CreateAudiobook extends Fragment {
                     @Override
                     public void onDone(String s) {
                         Log.i(TAG, "successfully synthesized book\n"+s);
-                        Toast.makeText(getApplicationContext(), "Audio book created", Toast.LENGTH_SHORT).show();
+                        try{
+                            Toast.makeText(getApplicationContext(), "Audio book created", Toast.LENGTH_SHORT).show();
+                        }catch (Exception e){
+                            Looper.prepare();
+                            Toast.makeText(getApplicationContext(), "Audio book created", Toast.LENGTH_SHORT).show();
+                            Looper.loop();
+                        }
                     }
 
                     @Override
