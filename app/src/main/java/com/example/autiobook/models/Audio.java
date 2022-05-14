@@ -16,14 +16,16 @@ import java.util.List;
 public class Audio {
     private File file;
     private String name;
+    private String path;
 
     // empty constructor needed by the Parceler library
     public Audio() {}
 
-    public Audio(String name, File file){
+    public Audio(String name, File file, String path){
         //remove the .mp3
         this.name = name.substring(0,name.length()-4);
         this.file = file;
+        this.path = path;
     }
 
     public static List<Audio> getUserAudioBooks(Context context){
@@ -42,7 +44,7 @@ public class Audio {
         //init Audio list
         for(int i=0;i<fileList.size();i++){
             File book = fileList.get(i);
-            audioBooks.add(new Audio(book.getName(), book));
+            audioBooks.add(new Audio(book.getName(), book, book.getAbsolutePath()));
         }
 
         return audioBooks;
@@ -80,6 +82,10 @@ public class Audio {
 
     public File getFile() {
         return file;
+    }
+
+    public String getPath() {
+        return path;
     }
 
 //    public String getContent() {

@@ -57,24 +57,40 @@ public class DetailActivity extends AppCompatActivity {
         //set title
         tvName.setText(audioBook.getName());
 
+        Uri uri = Uri.parse(audioBook.getPath());
+        mediaPlayer = mediaPlayer.create(getApplicationContext(), uri);
+        handler = new Handler();
+
         btnPlay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                btnPlay.setImageResource(R.drawable.ic);
-                playSong();
+                if(mediaPlayer.isPlaying()) {
+                    mediaPlayer.pause();
+                    btnPlay.setImageResource(R.drawable.ic_play);
+                }
+                else {
+                    playSong();
+                    btnPlay.setImageResource(R.drawable.ic_pause);
+                }
+
             }
         });
 
-        Uri uri = Uri.fromFile(audioBook.getFile());
-        mediaPlayer = mediaPlayer.create(getApplicationContext(), uri);
-        handler = new Handler();
 
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 if(fromUser){
-                    mediaPlayer.seekTo(progress);
-                    seekBar.setProgress(progress);
+                    if(mediaPlayer.isPlaying()){
+                        mediaPlayer.seekTo(progress);
+                        seekBar.setProgress(progress);
+                    }
+                    else{
+                        mediaPlayer.start();
+                        mediaPlayer.seekTo(progress);
+                        seekBar.setProgress(progress);
+                    }
+
                 }
             }
 
@@ -90,17 +106,9 @@ public class DetailActivity extends AppCompatActivity {
         });
     }
     public void playSong(){
-//        Uri uri = Uri.fromFile(audioBook.getFile());
-//        mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
-//        mediaPlayer.reset();
-
         mediaPlayer.start();
         seekBar.setMax(mediaPlayer.getDuration());
         updateSeekBar();
-
-//        try {
-//            mediaPlayer.setDataSource(DetailActivity.this, uri);
-//        }catch (Exception e){e.printStackTrace();}
     }
 
     private void updateSeekBar() {
@@ -115,7 +123,7 @@ public class DetailActivity extends AppCompatActivity {
                 updateSeekBar();
             }
         };
-        //call after 1000ms
-        handler.postDelayed(runnable, 1000);
+        //call after 500ms
+        handler.postDelayed(runnable, 500);
     }
 }

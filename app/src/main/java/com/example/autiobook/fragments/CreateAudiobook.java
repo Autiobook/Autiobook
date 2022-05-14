@@ -188,8 +188,10 @@ public class CreateAudiobook extends Fragment {
             }else{
                 //syntehsize with tts
                 String utteranceId = title;
-                Log.i(TAG, book);
+                if(book.length()>4000)
+                    book = book.substring(0,3999);
                 textToSpeech.synthesizeToFile(book, null, file, utteranceId);
+
                 textToSpeech.setOnUtteranceProgressListener(new UtteranceProgressListener() {
                     @Override
                     public void onStart(String s) {
